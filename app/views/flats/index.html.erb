@@ -1,2 +1,32 @@
-<h1>All our Flats (<%= @flats.count %>)</h1>
-
+<div class="card-container">
+<h2>All our Flats (<%= @flats.count %>)</h2>
+<div class="card-grid">
+  <% @flats.each do |flat| %>
+  <div class="card">
+    <div class="details">
+      <h3> <%= flat.name %></h3>
+      <p><%= flat.address %></p>
+      <div>
+        <ul class=icon-list>
+          <li><i class="fas fa-user-friends"></i></li>
+          <li><%= flat.number_of_guests %></li>
+          <li><i class="fas fa-euro-sign"></i></li>
+          <li><%= flat.price_per_night %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="more-info">
+      <%= link_to "More info", flat_path(flat), class: "btn btn-primary" %>
+      <%= link_to "Edit", edit_flat_path(flat), class: "btn btn-warning" %>
+      <%= link_to "Delete", flat_path(flat), method: :delete, class: "btn btn-danger" %>
+    </div>
+  </div>
+  <% end %>
+</div>
+<form>
+  <div class="form-group" action="/flats" method="get">
+    <label for="query">Search</label>
+    <input type="text" name="query" class="form-control" id="exampleInputEmail1" placeholder=<%= params[:query] %>>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>

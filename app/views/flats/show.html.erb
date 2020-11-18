@@ -1,0 +1,38 @@
+<div class="header-image"></div>
+<div class="show-grid">
+  <div class="left-column">
+    <div class="show-card">
+      <h1><%= @flat.name %></h1>
+      <h3><%= @flat.address %></h3>
+    </div>
+    <div class="show-card">
+      <h2>A bit more about the flat</h2>
+      <p><%= @flat.description %></p>
+    </div>
+    <div class="show-card">
+      <h2>Details</h2>
+      <div>
+        <ul class=icon-list>
+          <li><i class="fas fa-user-friends"></i></li>
+          <li><%= @flat.number_of_guests %></li>
+          <li><i class="fas fa-euro-sign"></i></li>
+          <li><%= @flat.price_per_night %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="right-column">
+<div class="booking">
+  <h3>Book This Place</h3>
+</div>
+<div class="social">
+  <p>Share</p>
+  <ul>
+    <li><i class="fab fa-facebook-square"></i></li>
+    <li><i class="fab fa-twitter-square"></i></li>
+    <li><i class="fab fa-pinterest-square"></i></li>
+    <li><i class="fas fa-envelope-square"></i></li>
+  </ul>
+</div>
+  </div>
+</div>

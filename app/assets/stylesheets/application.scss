@@ -1,0 +1,44 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+.card-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.show-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  margin: 50px;
+}
+
+.show-card, .booking, .social {
+  border-radius: 5px;
+  box-shadow: 3px 3px 1px 0px rgba(0,0,0,.1);
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(0,0,0,.1);
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social ul, li,  .social p {
+  display: inline-block;
+  margin: 0px;
+}
